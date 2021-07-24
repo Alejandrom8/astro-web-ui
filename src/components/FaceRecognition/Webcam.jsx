@@ -5,11 +5,10 @@ import { baseShadows } from "../core/Theme";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '700px',
-        height: '700px',
-        borderRadius: '50%',
+        width: '500px',
+        height: '500px',
         overflow: 'hidden',
-        boxShadow: baseShadows.card,
+        borderRadius: '48%',
         backgroundColor: '#000'
     }
 }));
@@ -21,7 +20,6 @@ const WebcamFaceRecognition = () => {
     const snapshot = useCallback(() => {
         const imageSource = webcamRef.current.getScreenshot();
     }, [webcamRef]);
-
 
     return <Box className={classes.root}>
         <Webcam
